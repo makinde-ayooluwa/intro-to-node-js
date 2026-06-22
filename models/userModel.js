@@ -4,7 +4,6 @@ const userSchema = new Schema(
         username: {
             type: String,
             required: true,
-            unique: true,
             lowercase: true,
             trim: true,
             minLength: 1,
@@ -20,6 +19,9 @@ const userSchema = new Schema(
             type: String,
             required: true,
             minLength: 1
+        },
+        details: {
+            type: Array
         }
     },
     {
