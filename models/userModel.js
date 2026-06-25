@@ -1,7 +1,7 @@
 import mongoose, { Schema } from "mongoose";
 const userSchema = new Schema(
     {
-        username: {
+        fullname: {
             type: String,
             required: true,
             lowercase: true,
@@ -18,10 +18,8 @@ const userSchema = new Schema(
         email: {
             type: String,
             required: true,
-            minLength: 1
-        },
-        details: {
-            type: Array
+            minLength: 1,
+            unique: true
         }
     },
     {
